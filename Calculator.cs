@@ -9,9 +9,8 @@ namespace Kontur.Courses.Git
 			if (args.Length == 0)
 				return lastResult;
 			if (args.Length == 1)
-<<<<<<< f7e896915c6a9ad78e99edd2f8f76aecb24a924b
-				return lastResult = double.Parse(args[0]);
-			if (args.Length == 2)
+                return lastResult = TryParseDouble(args[0]);
+            if (args.Length == 2)
 			{
                 // Если не хватает первого аргумента, то использовать lastResult
                 // Должно работать так:
@@ -21,9 +20,6 @@ namespace Kontur.Courses.Git
                 //>5
                 return lastResult = Execute(args[0], lastResult.Value, double.Parse(args[1]));
             }
-=======
-				return lastResult = TryParseDouble(args[0]);
->>>>>>> Calculator does not fail any more on error user input.
 			if (args.Length == 3)
 			{
 				var v1 = TryParseDouble(args[0]);
